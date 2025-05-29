@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Engineering College Barmer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for elements that need more styling than Tailwind provides */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .course-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .news-card:hover .news-title {
+            color: #3b82f6;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+        }
+        
+        /* Animation for page transitions */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .page {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-graduation-cap text-3xl text-blue-600 mr-2"></i>
+                <h1 class="text-2xl font-bold text-gray-800">Government Engineering College </h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+                <a href="#courses" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Courses</a>
+                <a href="#faculty" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Faculty</a>
+                <a href="#admissions" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Admissions</a>
+                <a href="#news" class="nav-link text-gray-700 hover:text-blue-600 font-medium">News & Events</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About Us</a>
+            <a href="#courses" class="block py-2 text-gray-700 hover:text-blue-600">Courses</a>
+            <a href="#faculty" class="block py-2 text-gray-700 hover:text-blue-600">Faculty</a>
+            <a href="#admissions" class="block py-2 text-gray-700 hover:text-blue-600">Admissions</a>
+            <a href="#news" class="block py-2 text-gray-700 hover:text-blue-600">News & Events</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home/Hero Section -->
+        <section id="home" class="hero-image flex items-center justify-center text-white page">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Government Engineering College </h1>
+                <p class="text-xl md:text-2xl mb-8">Shaping futures through excellence in education</p>
+                <a href="#admissions" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">Apply Now</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 bg-white page">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">About Our College</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Our History</h3>
+                        <p class="text-gray-600">Founded in 1985, Government Engineering College Barmer has been a pioneer in providing quality education for over three decades. We've grown from a small institution to a leading educational hub with state-of-the-art facilities.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Our Mission</h3>
+                        <p class="text-gray-600">To empower students with knowledge, skills, and values that prepare them for global challenges. We foster innovation, critical thinking, and social responsibility in a diverse learning environment.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Our Vision</h3>
+                        <p class="text-gray-600">To be recognized as a premier institution that transforms lives through education, research, and community engagement, producing leaders who make a positive impact on society.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-blue-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Why Choose Government Engineering College Barmer ?</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Experienced Faculty</h4>
+                                <p class="text-gray-600">Our faculty members are experts in their fields with years of teaching and industry experience.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Modern Facilities</h4>
+                                <p class="text-gray-600">State-of-the-art labs, libraries, and sports facilities to support holistic development.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Industry Connections</h4>
+                                <p class="text-gray-600">Strong ties with leading companies for internships and placement opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Vibrant Campus Life</h4>
+                                <p class="text-gray-600">Numerous clubs, societies, and events to enrich your college experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-16 bg-gray-50 page">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Our Academic Programs</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">We offer a wide range of undergraduate B.E / B.Tech  programs designed to meet the needs of today's dynamic world.</p>
+                
+              <section class="py-12">
+  <div class="flex justify-center">
+    <!-- Undergraduate Courses -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300 max-w-4xl w-full">
+      <div class="bg-blue-600 text-white py-3 px-4 text-center">
+        <h3 class="text-xl font-semibold">B Tech Programs</h3>
+      </div>
+      <div class="p-6">
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Computer Science (AI & ML)
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Computer Science (specialization with AI & ML Engineering).</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Civil Engineering
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Civil Engineering.</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Electrical Engineering
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Electrical Engineering.</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Mechanical Engineering
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Mechanical Engineering.</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Petroleum Engineering
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Petroleum Engineering.</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Electronics and Communications Engineering
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Electronics and Communications Engineering.</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-medium text-gray-800 flex items-center">
+            <i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Chemical Engineering
+          </h4>
+          <p class="text-gray-600 text-sm mt-1">4-year program in Chemical Engineering.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-12 text-center">
+    <a href="#admissions" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">Learn More About Admissions</a>
+  </div>
+</section>
+
+        <!-- Faculty Section -->
+        <section id="faculty" class="py-16 bg-white page">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Meet Our Faculty</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Our distinguished faculty members are dedicated to providing exceptional education and mentorship.</p>
+                
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Faculty Member 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Sarah Johnson" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Dr. Sarah Johnson</h3>
+                            <p class="text-blue-600 text-sm mb-2">Professor of Computer Science</p>
+                            <p class="text-gray-600 text-sm">PhD in Artificial Intelligence, 15 years of teaching experience</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Prof. Michael Chen" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Prof. Michael Chen</h3>
+                            <p class="text-blue-600 text-sm mb-2">Head of Mechanical Engineering</p>
+                            <p class="text-gray-600 text-sm">Former industry professional with 10 patents to his name</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Priya Sharma" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Dr. Priya Sharma</h3>
+                            <p class="text-blue-600 text-sm mb-2">Professor of Biotechnology</p>
+                            <p class="text-gray-600 text-sm">Published researcher with multiple international collaborations</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Prof. David Wilson" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Prof. David Wilson</h3>
+                            <p class="text-blue-600 text-sm mb-2">Dean of Business Studies</p>
+                            <p class="text-gray-600 text-sm">Former CEO with extensive corporate experience</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Emily Parker" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Dr. Emily Parker</h3>
+                            <p class="text-blue-600 text-sm mb-2">Professor of English Literature</p>
+                            <p class="text-gray-600 text-sm">Award-winning author and literary critic</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 6 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Prof. Robert Kim" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Prof. Robert Kim</h3>
+                            <p class="text-blue-600 text-sm mb-2">Head of Mathematics</p>
+                            <p class="text-gray-600 text-sm">Specialist in applied mathematics and mathematical modeling</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 7 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Dr. Anita Desai" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Dr. Anita Desai</h3>
+                            <p class="text-blue-600 text-sm mb-2">Professor of Economics</p>
+                            <p class="text-gray-600 text-sm">Policy advisor to government agencies on economic matters</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Faculty Member 8 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faculty-card transition duration-300">
+                        <img src="https://randomuser.me/api/portraits/men/92.jpg" alt="Prof. James Carter" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Prof. James Carter</h3>
+                            <p class="text-blue-600 text-sm mb-2">Head of Environmental Science</p>
+                            <p class="text-gray-600 text-sm">Leader in sustainable development research</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <button id="view-more-faculty" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full inline-block transition duration-300">View All Faculty Members</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="admissions" class="py-16 bg-gray-50 page">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Admissions Process</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Begin your journey at Modern College with our straightforward admission process.</p>
+        
+        <div class="flex flex-col items-center mb-12">
+            <!-- B Tech Admissions -->
+            <div class="bg-white p-8 rounded-lg shadow-sm max-w-2xl w-full">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800 text-center">B Tech Admissions</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Check Eligibility</h4>
+                            <p class="text-gray-600 text-sm mt-1">Minimum 60% in 10+2 or equivalent examination from a recognized board.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Submit Application</h4>
+                            <p class="text-gray-600 text-sm mt-1">Complete the online application form and pay the application fee.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Entrance Test</h4>
+                            <p class="text-gray-600 text-sm mt-1">Appear for the Modern College Entrance Test (MCET) or submit valid national test scores.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="font-bold">4</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Interview</h4>
+                            <p class="text-gray-600 text-sm mt-1">Shortlisted candidates will be called for a personal interview.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="font-bold">5</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Admission Offer</h4>
+                            <p class="text-gray-600 text-sm mt-1">Successful candidates will receive admission offers via email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brochure Section -->
+            <div class="text-center mt-8 max-w-2xl w-full">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Download Our Brochure</h3>
+                <p class="text-gray-600 mb-6">Get detailed information about our programs, facilities, and admission process in our comprehensive brochure.</p>
+                <button id="download-brochure" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">
+                    <i class="fas fa-download mr-2"></i> Download Brochure (PDF)
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- News & Events Section -->
+        <section id="news" class="py-16 bg-white page">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">News & Events</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Stay updated with the latest happenings at Modern College.</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- News Item 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden news-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Annual Science Fair" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="text-blue-600 text-sm mb-2">June 15, 2024</div>
+                            <h3 class="news-title font-bold text-lg mb-2 text-gray-800 transition duration-300">Annual Science Fair 2024</h3>
+                            <p class="text-gray-600 text-sm">Our college will host the Annual Science Fair showcasing innovative projects from students across all science departments.</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium inline-block mt-3">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden news-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Guest Lecture" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="text-blue-600 text-sm mb-2">June 5, 2024</div>
+                            <h3 class="news-title font-bold text-lg mb-2 text-gray-800 transition duration-300">Guest Lecture by Nobel Laureate</h3>
+                            <p class="text-gray-600 text-sm">Dr. Robert Langdon, Nobel Prize winner in Physics, will deliver a special lecture on "The Future of Quantum Computing".</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium inline-block mt-3">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden news-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Campus Placement" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="text-blue-600 text-sm mb-2">May 28, 2024</div>
+                            <h3 class="news-title font-bold text-lg mb-2 text-gray-800 transition duration-300">Record Campus Placement Season</h3>
+                            <p class="text-gray-600 text-sm">Modern College achieves 95% placement rate with highest package of ₹42 LPA offered by a leading tech company.</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium inline-block mt-3">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden news-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Research Grant" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="text-blue-600 text-sm mb-2">May 20, 2024</div>
+                            <h3 class="news-title font-bold text-lg mb-2 text-gray-800 transition duration-300">₹5 Crore Research Grant Awarded</h3>
+                            <p class="text-gray-600 text-sm">Our Biotechnology department receives major funding for cancer research project in collaboration with AIIMS.</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium inline-block mt-3">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden news-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Sports Achievement" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="text-blue-600 text-sm mb-2">May 15, 2024</div>
+                            <h3 class="news-title font-bold text-lg mb-2 text-gray-800 transition duration-300">Inter-University Sports Championship</h3>
+                            <p class="text-gray-600 text-sm">Our college teams win 3 gold medals in the state-level inter-university sports championship held last week.</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium inline-block mt-3">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 6 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden news-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="New Campus" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="text-blue-600 text-sm mb-2">May 10, 2024</div>
+                            <h3 class="news-title font-bold text-lg mb-2 text-gray-800 transition duration-300">New Smart Campus Inauguration</h3>
+                            <p class="text-gray-600 text-sm">The new smart campus extension with advanced research labs and innovation center will be inaugurated next month.</p>
+                            <a href="#" class="text-blue-600 text-sm font-medium inline-block mt-3">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button id="view-all-news" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full inline-block transition duration-300">View All News & Events</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="py-16 bg-gray-50 page">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Contact Us</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">We'd love to hear from you. Reach out to us for any inquiries or visit our campus.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Send Us a Message</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="admission">Admission Inquiry</option>
+                                    <option value="course">Course Information</option>
+                                    <option value="faculty">Faculty Related</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feedback">Feedback/Suggestion</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md w-full transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                            <h3 class="text-2xl font-semibold mb-6 text-gray-800">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Address</h4>
+                                        <p class="text-gray-600">Government Engineering College <br>NH 68 , Jalipa cant.<br>Barmer</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Phone</h4>
+                                        <p class="text-gray-600">+91 80 1234 5678 (Admissions)<br>+91 80 1234 5679 (General)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope text-blue-600 text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Email</h4>
+                                        <p class="text-gray-600">gecbarmer@gmail.com<br>info@gecbarmer</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-blue-600 text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Office Hours</h4>
+                                        <p class="text-gray-600">Monday to Friday: 9:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Closed on Sundays and Public Holidays</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-lg shadow-sm">
+                            <h3 class="text-2xl font-semibold mb-6 text-gray-800">Visit Our Campus</h3>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.820351024743!2d71.4055902018132!3d25.809500212555157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3944257eeaebd665%3A0xa589e017179ffb02!2z4KSH4KSC4KSc4KWA4KSo4KS_4KSv4KSw4KS_4KSC4KSXIOCkleClieCksuClh-CknCDgpKzgpLDgpK7gpYfgpLA!5e0!3m2!1shi!2sin!4v1748502660156!5m2!1shi!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Frequently Asked Questions</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-200 pb-4">
+                            <button class="faq-question flex justify-between items-center w-full text-left font-medium text-gray-800 focus:outline-none">
+                                <span>What are the application deadlines?</span>
+                                <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-2 text-gray-600 hidden">
+                                <p>For undergraduate programs, the application deadline is March 31, 2024. For postgraduate programs, the deadline is April 15, 2024. However, we recommend applying as early as possible as some programs may fill up before the deadline.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border-b border-gray-200 pb-4">
+                            <button class="faq-question flex justify-between items-center w-full text-left font-medium text-gray-800 focus:outline-none">
+                                <span>What documents are required for application?</span>
+                                <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-2 text-gray-600 hidden">
+                                <p>You will need to submit scanned copies of: 10th and 12th mark sheets (for UG), bachelor's degree mark sheets (for PG), entrance exam scorecard (if applicable), identity proof, passport-size photograph, and any other relevant certificates.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border-b border-gray-200 pb-4">
+                            <button class="faq-question flex justify-between items-center w-full text-left font-medium text-gray-800 focus:outline-none">
+                                <span>Is hostel accommodation available?</span>
+                                <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-2 text-gray-600 hidden">
+                                <p>Yes, we provide separate hostel facilities for boys and girls within the campus. Hostel rooms are available on a first-come, first-served basis. You can apply for hostel accommodation after securing admission.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border-b border-gray-200 pb-4">
+                            <button class="faq-question flex justify-between items-center w-full text-left font-medium text-gray-800 focus:outline-none">
+                                <span>What scholarships are available?</span>
+                                <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-2 text-gray-600 hidden">
+                                <p>We offer merit-based scholarships for top performers in entrance exams, need-based scholarships for economically disadvantaged students, and special scholarships for sports and cultural achievements. Details are available in the financial aid section of our website.</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <button class="faq-question flex justify-between items-center w-full text-left font-medium text-gray-800 focus:outline-none">
+                                <span>Can I visit the campus before applying?</span>
+                                <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-2 text-gray-600 hidden">
+                                <p>Absolutely! We encourage prospective students to visit our campus. We conduct regular campus tours every Wednesday at 10 AM and 2 PM. Please register for a tour on our website or contact the admissions office to schedule your visit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Engineering College Barmer</h3>
+                    <p class="text-gray-400">Shaping futures through excellence in education since 1985.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="#faculty" class="text-gray-400 hover:text-white">Faculty</a></li>
+                        <li><a href="#admissions" class="text-gray-400 hover:text-white">Admissions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Alumni</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Newsletter</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Engineering College Barmer. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. We'll contact you at ${email} soon.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // View More Faculty Button
+        const viewMoreFacultyBtn = document.getElementById('view-more-faculty');
+        
+        viewMoreFacultyBtn.addEventListener('click', () => {
+            alert('This would load more faculty members in a real implementation.');
+        });
+        
+        // View All News Button
+        const viewAllNewsBtn = document.getElementById('view-all-news');
+        
+        viewAllNewsBtn.addEventListener('click', () => {
+            alert('This would show all news articles in a real implementation.');
+        });
+        
+        // Download Brochure Button
+        const downloadBrochureBtn = document.getElementById('download-brochure');
+        
+        downloadBrochureBtn.addEventListener('click', () => {
+            alert('This would download the brochure PDF in a real implementation.');
+        });
+        
+        // Page transition effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const pages = document.querySelectorAll('.page');
+            
+            pages.forEach(page => {
+                page.style.opacity = '0';
+                setTimeout(() => {
+                    page.style.opacity = '1';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
